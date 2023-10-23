@@ -4,8 +4,7 @@ import 'package:get/get_state_manager/get_state_manager.dart';
 
 class SignInPage extends GetView<SignInController> {
   const SignInPage({super.key});
-
-  @override
+  
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
