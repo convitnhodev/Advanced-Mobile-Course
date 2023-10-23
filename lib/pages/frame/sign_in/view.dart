@@ -57,11 +57,11 @@ class SignInPage extends GetView<SignInController> {
                 ),
               ), 
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  IconButton(onPressed: () {}, icon: const Icon(Icons.abc)), 
-                  IconButton(onPressed: () {}, icon: const Icon(Icons.abc)), 
-                  IconButton(onPressed: () {}, icon: const Icon(Icons.abc))
+                  IconButton(onPressed: () {}, icon: Image.asset('lib/images/facebook.png')),
+                  IconButton(onPressed: () {}, icon: Image.asset('lib/images/google.png')),
+                  IconButton(onPressed: () {}, icon: Image.asset('lib/images/phone.png')),
                 ],
               ), 
 
