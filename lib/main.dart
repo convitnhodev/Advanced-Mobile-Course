@@ -16,7 +16,7 @@ class Myapp extends StatelessWidget {
   
       body:  SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(top: 50, left: 50, right: 50 ),
+          padding: const EdgeInsets.only(top: 100, left: 50, right: 50 ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -26,19 +26,32 @@ class Myapp extends StatelessWidget {
                   fontSize: 30
                 ),                
               ),
+
+              SizedBox( 
+                height: 100,
+              ), 
               Container(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    const Text('Email'), 
+                    const Text('EMAIL'), 
                     const TextField(), 
-                    const Text('Password'),
+                    SizedBox(
+                      height: 30,
+                    ), 
+                    const Text('PASSWORD'),
                     const TextField(), 
-                    TextButton(onPressed: (){}, child: const Text('Forgot Password?')), 
+                           SizedBox(
+                      height: 30,
+                    ), 
+                    Padding(
+                      padding: const EdgeInsets.only(left: 150),
+                      child: TextButton(onPressed: (){}, child: const Text('Forgot Password?')),
+                    ), 
                     ElevatedButton(onPressed: () {}, child: const Text('Login'))
                   ],
                 ),
-                color: Colors.yellow,
+                
               ), 
               const Padding(
                 padding: EdgeInsets.all(8.0),
@@ -47,6 +60,7 @@ class Myapp extends StatelessWidget {
                 ),
               ), 
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   IconButton(onPressed: () {}, icon: const Icon(Icons.abc)), 
                   IconButton(onPressed: () {}, icon: const Icon(Icons.abc)), 
@@ -54,13 +68,16 @@ class Myapp extends StatelessWidget {
                 ],
               ), 
 
-              Row(
-                children: [
-
-                  const Text('Not a member yet?'), 
-                  TextButton(onPressed: () {}, child: const Text('Sign up', ))
-                ],
-
+              Padding(
+                padding: const EdgeInsets.only(top: 15),
+                child: Row(
+                  children: [
+              
+                    const Text('Not a member yet?'), 
+                    TextButton(onPressed: () {}, child: const Text('Sign up', ))
+                  ],
+              
+                ),
               ),
             ],
 
