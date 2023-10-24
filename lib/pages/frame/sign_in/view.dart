@@ -12,30 +12,32 @@ class SignInPage extends GetView<SignInController> {
   
       body:  SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(top: 100, left: 50, right: 50 ),
+          padding: const EdgeInsets.only(top: 120, left: 50, right: 50 ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const Text(
                 'Sign in', 
                 style: TextStyle(
-                  fontSize: 30
+                  fontSize: 45, 
+                  fontWeight: FontWeight.bold
+                  
                 ),                
               ),
 
               SizedBox( 
-                height: 100,
+                height: 70,
               ), 
               Container(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    const Text('EMAIL'), 
+                    const Text('Email'), 
                     const TextField(), 
                     SizedBox(
                       height: 30,
                     ), 
-                    const Text('PASSWORD'),
+                    const Text('Password'),
                     const TextField(), 
                            SizedBox(
                       height: 30,
@@ -50,7 +52,7 @@ class SignInPage extends GetView<SignInController> {
                 
               ), 
               const Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(9),
                 child: SizedBox(
                   child: Divider(color: Colors.black),
                 ),
@@ -65,10 +67,10 @@ class SignInPage extends GetView<SignInController> {
               ), 
 
               Padding(
-                padding: const EdgeInsets.only(top: 15),
+                padding: const EdgeInsets.only(top: 35),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-              
                     const Text('Not a member yet?'), 
                     TextButton(onPressed: () {}, child: const Text('Sign up', ))
                   ],

@@ -20,9 +20,106 @@ class TutorsListPage extends GetView<TutorsListController> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Column(
-
+            Center(
+              child: Card(
+                elevation: 30,
+                child: Column(
+                  children: [
+                    Text(
+                      'Upcoming Lession', 
+                      style: TextStyle(
+                        fontSize: 30
+                      ),
+                    ), 
+                    Text(
+                      'Fri, 30 Sep 22 18:30 - 18:55', 
+                    ), 
+                    ElevatedButton(
+                      onPressed: () {}, 
+                      child: Row(
+                        children: [
+                        Icon(Icons.abc_outlined), 
+                        Text(
+                          'Enter lession room'
+                        )
+                        ],
+                      )
+                    )
+                  ],
+                ),
+              ),
             ), 
+            Column(
+              children: [
+                Text('Find a tutor'), 
+                     TextField(), 
+                           SizedBox(
+                      height: 30,
+                    ), 
+              ],
+            ), 
+
+            const Padding(
+                padding: EdgeInsets.all(9),
+                child: SizedBox(
+                  child: Divider(color: Colors.black),
+                ),
+              ), 
+
+            Column(
+              children: [
+                Text(
+                  'Recommended tutors'
+                ), 
+                Card(
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          
+                           IconButton(onPressed: () {}, icon: Image.asset('lib/images/facebook.png')),
+                           Column(
+                            children: [
+                              Text(
+                                'Keegan'
+                              ), 
+                              Row(
+                                children: [
+                                Icon(Icons.access_alarm)
+                                ],
+                              )
+                            ],
+                           ), 
+                           Icon(Icons.heart_broken)
+                        ],
+                        
+                      ), 
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text('Test 1'), 
+                          Text('Test 2'), 
+                          Text('Text 3'),
+                        ],
+                      ), 
+
+                      Row(
+                        children: [
+                          Card(
+                            child: Text(
+                              'I am a last year student at University of Scient. Currently, I work as a '
+                            ),
+                          )
+                        ],
+                      )
+
+                    ],
+                  ),
+                )
+              ],
+            )
+
             
           ],
         ),
