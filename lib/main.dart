@@ -2,11 +2,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_application_1/common/routes/pages.dart';
+import 'package:flutter_application_1/pages/frame/home/view.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 Future<void> main() async {
-  runApp(MyApp());
+  runApp(MaterialApp(home: HomePage()));
 }
 
 

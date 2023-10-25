@@ -1,5 +1,7 @@
 import 'package:flutter_application_1/common/routes/names.dart';
 import 'package:flutter_application_1/pages/frame/drawer_menu/index.dart';
+import 'package:flutter_application_1/pages/frame/home/bindings.dart';
+import 'package:flutter_application_1/pages/frame/home/view.dart';
 import 'package:flutter_application_1/pages/frame/sign_in/bindings.dart';
 import 'package:flutter_application_1/pages/frame/sign_in/view.dart';
 import 'package:flutter_application_1/pages/frame/tutors_list/bindings.dart';
@@ -7,9 +9,7 @@ import 'package:flutter_application_1/pages/frame/tutors_list/view.dart';
 import 'package:get/route_manager.dart';
 
 class AppPages {
-  static const INITIAL = AppRoutes.TUTORS_LIST; 
-
-
+  static const INITIAL = AppRoutes.INITIAL; 
 
   static List<String> history = [];
 
@@ -19,6 +19,14 @@ class AppPages {
       page: () => const SignInPage(),
       binding: SignInBinding(),
     ),
+
+
+        GetPage(
+      name: AppRoutes.INITIAL,
+      page: () => const HomePage(),
+      binding: HomeBinding(),
+    ),
+
 
     GetPage(
       name: AppRoutes.TUTORS_LIST, 

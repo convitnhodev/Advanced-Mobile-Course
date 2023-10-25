@@ -11,16 +11,8 @@ class SettingPage extends GetView<SettingController> {
   @override
  
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Setting'
-        ),
-              
-      ),
-      body: Container(),
-    
-
+    return   Center(
+      child: Text('setting'),
     );
     
   }

@@ -10,17 +10,8 @@ class SearchPage extends GetView<SearchController> {
   @override
  
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Search'
-        ),
-              
-      ),
-      body: Container(),
-    
-
+     return Center(
+      child: Text('search'),
     );
-    
   }
 }

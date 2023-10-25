@@ -10,16 +10,32 @@ class TutorsListPage extends GetView<TutorsListController> {
   @override
  
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Tutor'
-        ),
+    return SingleChildScrollView(
+      
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Card(
+            margin: EdgeInsets.all(24),
+            elevation: 5, 
+            child: Column(
+              children: [
+                Text('Upcoming lession'),
+                Text('Fri, 30 Sep 22 18:30-18:55'),
+                TextButton.icon(onPressed: () {}, 
+                icon:  Image.asset('lib/images/facebook.png', width: 24, height: 24,), 
+                label: Text('Enter lesson room'))
+              ],
               
-      ),
-      body: Container(),
-    
+            ),
 
+          ), 
+
+          Text("Recommended tutors")
+          
+        ],
+      ),
+      
     );
     
   }
