@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/frame/tutors_list/controller.dart';
 import 'package:get/get.dart';
 
-class TutorsListPage extends GetView<TutorsListController> {
-   const TutorsListPage({super.key});
+class SearchPage extends GetView<SearchController> {
+   const SearchPage({super.key});
 
   @override
  
@@ -13,7 +13,7 @@ class TutorsListPage extends GetView<TutorsListController> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Tutor'
+          'Search'
         ),
               
       ),
