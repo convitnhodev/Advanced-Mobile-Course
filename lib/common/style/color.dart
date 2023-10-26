@@ -4,14 +4,16 @@ import 'package:flutter/material.dart';
 class AppColor {
   static const Color scaffoldbackground = Color(0xFFFFFFFF);
 
-  static const Color primaryBackground = Color.fromARGB(255, 255, 255, 255);
+  static const Color primaryBackground = Color.fromRGBO(17, 21, 27, 1.0);
+
+  static const Color primaryText = Color.fromRGBO(192, 192, 192, 1.0);
 
   static const Color primarySecondaryBackground = Color.fromARGB(255, 247, 247, 249);
 
   static const Color primaryElement = Color.fromARGB(255, 74, 123, 246);
 
   static const Color whiteText =  Color(0XFFFFFFFF);
-  static const Color primaryText = Color.fromARGB(255, 32, 47, 62);
+  // static const Color primaryText = Color.fromARGB(255, 32, 47, 62);
 
   static const Color secondaryText = Color(0xFF74788D);
 

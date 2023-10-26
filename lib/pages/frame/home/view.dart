@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/frame/home/controller.dart';
 import 'package:flutter_application_1/pages/frame/search/view.dart';
 import 'package:flutter_application_1/pages/frame/setting/view.dart';
+import 'package:flutter_application_1/pages/frame/sign_in/view.dart';
 import 'package:flutter_application_1/pages/frame/tutors_list/controller.dart';
 import 'package:flutter_application_1/pages/frame/tutors_list/view.dart';
 import 'package:get/get.dart';
@@ -23,6 +24,7 @@ class _HomePageState extends State<HomePage> {
     TutorsListPage(),
     SearchPage(), 
     SettingPage(), 
+    // SignInPage(),
    ]; 
 
 
@@ -32,12 +34,12 @@ class _HomePageState extends State<HomePage> {
   @override
  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          pagesTitles[current_index]
-        )
+      // appBar: AppBar(
+      //   title: Text(
+      //     pagesTitles[current_index]
+      //   )
               
-      ),
+      // ),
       body: pages[current_index], 
 
 
@@ -66,6 +68,11 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(Icons.abc), 
             label: 'Setting', 
             ), 
+
+            //   BottomNavigationBarItem(
+            // icon: Icon(Icons.abc), 
+            // label: 'Signin', 
+            // ), 
       ]),
     
 
