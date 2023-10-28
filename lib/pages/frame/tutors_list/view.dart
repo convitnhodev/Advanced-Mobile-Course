@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/common/style/color.dart';
+import 'package:flutter_application_1/pages/frame/detail_tutor/index.dart';
 import 'package:flutter_application_1/pages/frame/tutors_list/controller.dart';
 import 'package:get/get.dart';
 import 'package:flutter_application_1/common/const/size.dart';
@@ -172,7 +173,9 @@ class _TutorsListPageState extends State<TutorsListPage> {
                     ),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  DetailTutorPage(); 
+                },
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
