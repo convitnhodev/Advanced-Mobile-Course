@@ -174,7 +174,7 @@ class _TutorsListPageState extends State<TutorsListPage> {
                   ),
                 ),
                 onPressed: () {
-                  DetailTutorPage(); 
+                  
                 },
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -183,7 +183,7 @@ class _TutorsListPageState extends State<TutorsListPage> {
                     SizedBox(
                       width: 10,
                     ),
-                    Text('Book this tutor')
+                    Text('See more detail')
                   ],
                 )),
           ),
