@@ -9,9 +9,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 Future<void> main() async {
-   // runApp(MaterialApp(home: HomePage()));
+  runApp(MaterialApp(home: HomePage()));
 //  runApp(MaterialApp(home: SignInPage()));
-  runApp(MaterialApp(home: DetailTutorPage()));
+ //  runApp(MaterialApp(home: DetailTutorPage()));
 
 }
 
