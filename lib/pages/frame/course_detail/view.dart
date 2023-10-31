@@ -1,6 +1,45 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/common/style/color.dart';
 
+class TopicCards extends StatelessWidget {
+  const TopicCards({
+    super.key,
+    required this.icon,
+    required this.title,
+  });
+
+  final IconData icon;
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        color: AppColor.primarySecondaryBackground,
+      ),
+      child: Row(
+        children: [
+          Icon(
+            icon,
+            color: AppColor.primaryText,
+            size: 28,
+          ),
+          const SizedBox(width: 16),
+          Text(
+            title,
+            style: const TextStyle(
+              fontSize: 16,
+              color: AppColor.primaryText,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class CourseDetailPage extends StatefulWidget {
   const CourseDetailPage({super.key});
 
@@ -251,6 +290,58 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.symmetric(vertical: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                color: AppColor.primarySecondaryBackground,
+              ),
+              clipBehavior: Clip.hardEdge,
+              child: const Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Text(
+                    'List of Topics',
+                    style: TextStyle(
+                      color: AppColor.primaryText,
+                      fontSize: 20,
+                      letterSpacing: 0.4,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          
+                          TopicCards(
+                            icon: Icons.list_outlined,
+                            title: '1. Your favorite movie',
+                          ),
+                          TopicCards(
+                            icon: Icons.list_outlined,
+                            title: '2. Your favorite TV show',
+                          ),
+                          TopicCards(
+                            icon: Icons.list_outlined,
+                            title: '3. Film production',
+                          ),
+                          TopicCards(
+                            icon: Icons.list_outlined,
+                            title: '4. The world of streaming',
+                          ),
+                        ],
+                      )
                     ],
                   ),
                 ],
