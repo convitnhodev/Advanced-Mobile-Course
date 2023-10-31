@@ -3,8 +3,8 @@ import 'package:flutter_application_1/common/style/color.dart';
 import 'package:flutter_application_1/pages/frame/sign_in/controller.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 
-class SignInPage extends GetView<SignInController> {
-  const SignInPage({super.key});
+class RegisterPage extends GetView<SignInController> {
+  const RegisterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class SignInPage extends GetView<SignInController> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const Text(
-                'Sign In',
+                'Register',
                 style: TextStyle(
                   fontSize: 40,
                   fontWeight: FontWeight.w500,

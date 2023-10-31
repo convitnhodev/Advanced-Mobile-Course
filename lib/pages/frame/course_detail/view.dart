@@ -72,7 +72,7 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Image.asset(
-                'lib/images/cover.png',
+                'lib/images/ci_cd.png',
                 height: 240,
                 fit: BoxFit.cover,
               ),

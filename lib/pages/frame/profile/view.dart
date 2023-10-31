@@ -25,68 +25,96 @@ class _ProfilePageState extends State<ProfilePage> {
         elevation: 0,
       ),
       backgroundColor: AppColor.primaryBackground,
-      body: SingleChildScrollView(
+      body: Container(
         padding: const EdgeInsets.symmetric(
           vertical: 8,
           horizontal: 20,
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Align(
-              alignment: Alignment.center,
-              child: Container(
-                width: 120,
-                height: 120,
-                clipBehavior: Clip.hardEdge,
-                decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                ),
-                child: const CircleAvatar(
-                  backgroundImage: AssetImage('lib/images/avatar.jpeg'),
-                  radius: 44,
-                ),
-              ),
-            ),
-            const SizedBox(height: 12),
-            const Align(
-              alignment: Alignment.center,
-              child: Text(
-                'convitnhodev',
-                style: TextStyle(
-                  color: AppColor.primaryText,
-                  fontSize: 24,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ),
-            //const SizedBox(height: 12),
-            TextButton(
-              onPressed: () {},
-              child: const Text('Edit Profile'),
-            ),
-            const SizedBox(height: 12),
-            ProfileCard(
-              icon: Icons.calendar_month_outlined,
-              title: 'Schedule',
-              onPressed: () {},
-            ),
-            const SizedBox(height: 12),
-            ProfileCard(
-              icon: Icons.history_outlined,
-              title: 'History',
-              onPressed: () {},
-            ),
-            const SizedBox(height: 12),
-            ProfileCard(
-              icon: Icons.settings_outlined,
-              title: 'Settings',
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const SettingPage(),
+            Column(
+              children: [
+                Align(
+                  alignment: Alignment.center,
+                  child: Container(
+                    width: 120,
+                    height: 120,
+                    clipBehavior: Clip.hardEdge,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                    ),
+                    child: const CircleAvatar(
+                      backgroundImage: AssetImage('lib/images/avatar.jpeg'),
+                      radius: 44,
+                    ),
                   ),
-                );
-              },
+                ),
+                const SizedBox(height: 12),
+                const Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    'convitnhodev',
+                    style: TextStyle(
+                      color: AppColor.primaryText,
+                      fontSize: 24,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ),
+                //const SizedBox(height: 12),
+                TextButton(
+                  onPressed: () {},
+                  child: const Text('Edit Profile'),
+                ),
+                const SizedBox(height: 12),
+                ProfileCard(
+                  icon: Icons.calendar_month_outlined,
+                  title: 'Schedule',
+                  onPressed: () {},
+                ),
+                const SizedBox(height: 12),
+                ProfileCard(
+                  icon: Icons.history_outlined,
+                  title: 'History',
+                  onPressed: () {},
+                ),
+                const SizedBox(height: 12),
+                ProfileCard(
+                  icon: Icons.settings_outlined,
+                  title: 'Settings',
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const SettingPage(),
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ),
+            Align(
+              alignment: FractionalOffset.bottomCenter,
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  minimumSize: const Size.fromHeight(48),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    side: const BorderSide(
+                      color: Colors.blue,
+                    ),
+                  ),
+                ),
+                onPressed: () {},
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.logout_outlined),
+                    SizedBox(width: 12),
+                    Text('Logout'),
+                  ],
+                ),
+              ),
             ),
           ],
         ),

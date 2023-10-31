@@ -41,7 +41,7 @@ class _CourseCardState extends State<CourseCard> {
                   color: Colors.greenAccent,
                 ),
                 child: Image.asset(
-                  'lib/images/cover.png',
+                  'lib/images/ci_cd.png',
                   fit: BoxFit.cover,
                 ),
               ),
