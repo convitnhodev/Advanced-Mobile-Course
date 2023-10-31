@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/common/style/color.dart';
+import 'package:flutter_application_1/pages/frame/detail_tutor/index.dart';
 
 import '../../../widgets/tutor_card.dart';
 
@@ -42,6 +43,9 @@ class _TutorsListPageState extends State<TutorsListPage> {
       backgroundColor: AppColor.primaryBackground,
       body: Column(
         children: [
+          const SizedBox(
+            height: 8,
+          ),
           Expanded(
             child: PageView(
               children: const [
@@ -63,12 +67,18 @@ class _TutorsListPageState extends State<TutorsListPage> {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const DetailTutorPage(),
+                  ),
+                );
+              },
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.schedule),
-                  SizedBox(width: 10),
+                  Icon(Icons.info_outline_rounded),
+                  SizedBox(width: 12),
                   Text('See more detail'),
                 ],
               ),

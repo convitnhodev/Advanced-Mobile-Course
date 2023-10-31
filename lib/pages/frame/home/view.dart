@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/common/style/color.dart';
+import 'package:flutter_application_1/pages/frame/course_list/index.dart';
 import 'package:flutter_application_1/pages/frame/home/controller.dart';
 import 'package:flutter_application_1/pages/frame/profile/view.dart';
 import 'package:flutter_application_1/pages/frame/search/view.dart';
@@ -19,7 +20,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   List<Widget> pages = [
     const TutorsListPage(),
-    const SearchPage(),
+    const CourseListPage(),
     const ProfilePage(),
     // SignInPage(),
   ];
