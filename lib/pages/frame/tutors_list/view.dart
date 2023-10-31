@@ -21,6 +21,23 @@ class _TutorsListPageState extends State<TutorsListPage> {
         ),
         backgroundColor: AppColor.primaryBackground,
         elevation: 0,
+        centerTitle: true,
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.search_outlined,
+              color: AppColor.primaryText,
+            ),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.video_call_outlined,
+              color: AppColor.primaryText,
+            ),
+          ),
+        ],
       ),
       backgroundColor: AppColor.primaryBackground,
       body: Column(
