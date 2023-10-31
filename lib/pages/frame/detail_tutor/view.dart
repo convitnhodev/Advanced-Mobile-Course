@@ -43,10 +43,7 @@ class _DetailTutorPageState extends State<DetailTutorPage> {
                   children: [
                     const Text(
                       'convitnhodev',
-                      style: TextStyle(
-                          color: AppColor.primaryText,
-                          fontSize: 24,
-                          fontWeight: FontWeight.w300),
+                      style: TextStyle(color: AppColor.primaryText, fontSize: 24, fontWeight: FontWeight.w300),
                     ),
                     const SizedBox(
                       height: 4,
@@ -55,10 +52,7 @@ class _DetailTutorPageState extends State<DetailTutorPage> {
                       children: [
                         Text(
                           'Viet Nam',
-                          style: TextStyle(
-                              color: AppColor.primaryText,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w300),
+                          style: TextStyle(color: AppColor.primaryText, fontSize: 14, fontWeight: FontWeight.w300),
                         ),
                         Padding(
                           padding: EdgeInsets.only(right: 16, left: 8),
@@ -87,10 +81,7 @@ class _DetailTutorPageState extends State<DetailTutorPage> {
                             padding: EdgeInsets.only(left: 8),
                             child: Text(
                               '80',
-                              style: TextStyle(
-                                  color: AppColor.primaryText,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w300),
+                              style: TextStyle(color: AppColor.primaryText, fontSize: 16, fontWeight: FontWeight.w300),
                             ),
                           ),
                         ),
@@ -152,9 +143,9 @@ class _DetailTutorPageState extends State<DetailTutorPage> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
-            ), 
+            ),
             Container(
               margin: const EdgeInsets.symmetric(vertical: 8),
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
@@ -163,17 +154,17 @@ class _DetailTutorPageState extends State<DetailTutorPage> {
                 color: AppColor.primarySecondaryBackground,
               ),
               clipBehavior: Clip.hardEdge,
-        
               child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
                     'Description',
                     style: TextStyle(
-                        color: AppColor.primaryText,
-                        fontSize: 20,
-                        letterSpacing: 0.4,
-                        fontWeight: FontWeight.w600),
+                      color: AppColor.primaryText,
+                      fontSize: 20,
+                      letterSpacing: 0.4,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                   SizedBox(
                     height: 8,
@@ -181,15 +172,15 @@ class _DetailTutorPageState extends State<DetailTutorPage> {
                   Text(
                     'I’m a last-year BS student in Software Engineering with a passion for technology and system architectures. I’m skilled in programming languages such as C++, Java, Python and Golang, and experienced in Agile and Waterfall methodologies.',
                     style: TextStyle(
-                        color: AppColor.primaryText,
-                        fontSize: 15.5,
-                        height: 1.37,
-                        fontWeight: FontWeight.w300),
+                      color: AppColor.primaryText,
+                      fontSize: 15.5,
+                      height: 1.37,
+                      fontWeight: FontWeight.w300,
+                    ),
                   )
                 ],
               ),
             ),
-
             Container(
               margin: const EdgeInsets.symmetric(vertical: 8),
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
@@ -198,103 +189,103 @@ class _DetailTutorPageState extends State<DetailTutorPage> {
                 color: AppColor.primarySecondaryBackground,
               ),
               clipBehavior: Clip.hardEdge,
-        
-              child:  Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Text(
+                  const Text(
                     'Languages',
                     style: TextStyle(
-                        color: AppColor.primaryText,
-                        fontSize: 20,
-                        letterSpacing: 0.4,
-                        fontWeight: FontWeight.w600),
+                      color: AppColor.primaryText,
+                      fontSize: 20,
+                      letterSpacing: 0.4,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
                   Wrap(
-                  spacing: 12,
-                  runSpacing: -3,
-                  children: List<Widget>.generate(
-                    3,
-                    (index) => const Chip(
-                      backgroundColor: AppColor.primaryBackground,
-                      label: Text(
-                        'English',
-                        style: TextStyle(
-                            fontSize: 14, color: AppColor.primaryText),
+                    spacing: 12,
+                    runSpacing: -3,
+                    children: List<Widget>.generate(
+                      3,
+                      (index) => const Chip(
+                        backgroundColor: AppColor.primaryBackground,
+                        label: Text(
+                          'English',
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: AppColor.primaryText,
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                ),
-                  
                 ],
               ),
             ),
-
             Container(
-               margin: const EdgeInsets.symmetric(vertical: 8),
+              margin: const EdgeInsets.symmetric(vertical: 8),
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 color: AppColor.primarySecondaryBackground,
               ),
               clipBehavior: Clip.hardEdge,
-        
-              child:  Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Text(
+                  const Text(
                     'Specialties',
                     style: TextStyle(
-                        color: AppColor.primaryText,
-                        fontSize: 20,
-                        letterSpacing: 0.4,
-                        fontWeight: FontWeight.w600),
+                      color: AppColor.primaryText,
+                      fontSize: 20,
+                      letterSpacing: 0.4,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
                   Wrap(
-                  spacing: 12,
-                  runSpacing: -3,
-                  children: List<Widget>.generate(
-                    7,
-                    (index) => const Chip(
-                      backgroundColor: AppColor.primaryBackground,
-                      label: Text(
-                        'TOEIC',
-                        style: TextStyle(
-                            fontSize: 14, color: AppColor.primaryText),
+                    spacing: 12,
+                    runSpacing: -3,
+                    children: List<Widget>.generate(
+                      7,
+                      (index) => const Chip(
+                        backgroundColor: AppColor.primaryBackground,
+                        label: Text(
+                          'TOEIC',
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: AppColor.primaryText,
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                ),
-                  
                 ],
               ),
             ),
-
             Container(
-               margin: const EdgeInsets.symmetric(vertical: 8),
+              margin: const EdgeInsets.symmetric(vertical: 8),
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 color: AppColor.primarySecondaryBackground,
               ),
               clipBehavior: Clip.hardEdge,
-        
               child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
                     'Interests',
                     style: TextStyle(
-                        color: AppColor.primaryText,
-                        fontSize: 20,
-                        letterSpacing: 0.4,
-                        fontWeight: FontWeight.w600),
+                      color: AppColor.primaryText,
+                      fontSize: 20,
+                      letterSpacing: 0.4,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                   SizedBox(
                     height: 8,
@@ -302,35 +293,34 @@ class _DetailTutorPageState extends State<DetailTutorPage> {
                   Text(
                     'I like a lot of programming languages such as C++, Java, Python and Golang, and experienced in Agile and Waterfall methodologies.',
                     style: TextStyle(
-                        color: AppColor.primaryText,
-                        fontSize: 15.5,
-                        height: 1.37,
-                        fontWeight: FontWeight.w300),
+                      color: AppColor.primaryText,
+                      fontSize: 15.5,
+                      height: 1.37,
+                      fontWeight: FontWeight.w300,
+                    ),
                   )
                 ],
               ),
             ),
-
-
-                     Container(
-               margin: const EdgeInsets.symmetric(vertical: 8),
+            Container(
+              margin: const EdgeInsets.symmetric(vertical: 8),
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 color: AppColor.primarySecondaryBackground,
               ),
               clipBehavior: Clip.hardEdge,
-        
               child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
                     'Experience',
                     style: TextStyle(
-                        color: AppColor.primaryText,
-                        fontSize: 20,
-                        letterSpacing: 0.4,
-                        fontWeight: FontWeight.w600),
+                      color: AppColor.primaryText,
+                      fontSize: 20,
+                      letterSpacing: 0.4,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                   SizedBox(
                     height: 8,
@@ -338,20 +328,18 @@ class _DetailTutorPageState extends State<DetailTutorPage> {
                   Text(
                     'I have more than one year of experience working as a back-end engine',
                     style: TextStyle(
-                        color: AppColor.primaryText,
-                        fontSize: 15.5,
-                        height: 1.37,
-                        fontWeight: FontWeight.w300),
+                      color: AppColor.primaryText,
+                      fontSize: 15.5,
+                      height: 1.37,
+                      fontWeight: FontWeight.w300,
+                    ),
                   )
                 ],
               ),
-
-              
             ),
-
-             Padding(
-            padding: const EdgeInsets.fromLTRB(24, 24, 24, 24),
-            child: TextButton(
+            Padding(
+              padding: const EdgeInsets.all(24),
+              child: TextButton(
                 style: TextButton.styleFrom(
                   minimumSize: const Size.fromHeight(48),
                   shape: RoundedRectangleBorder(
@@ -361,9 +349,7 @@ class _DetailTutorPageState extends State<DetailTutorPage> {
                     ),
                   ),
                 ),
-                onPressed: () {
-                  
-                },
+                onPressed: () {},
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -373,15 +359,9 @@ class _DetailTutorPageState extends State<DetailTutorPage> {
                     ),
                     Text('Book this tutor')
                   ],
-                )),
-          ),
-
-
-
-            
-
-
-            
+                ),
+              ),
+            ),
           ],
         ),
       ),
