@@ -24,72 +24,36 @@ class _SettingPageState extends State<SettingPage> {
         elevation: 0,
       ),
       backgroundColor: AppColor.primaryBackground,
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(
-          vertical: 8,
-          horizontal: 20,
-        ),
+      body: const SingleChildScrollView(
+        padding: EdgeInsets.all(24),
         child: Column(
           children: [
-            Align(
-              alignment: Alignment.center,
-              child: Container(
-                width: 120,
-                height: 120,
-                clipBehavior: Clip.hardEdge,
-                decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                ),
-                child: const CircleAvatar(
-                  backgroundImage: AssetImage('lib/images/avatar.jpeg'),
-                  radius: 44,
-                ),
-              ),
-            ),
-            const SizedBox(height: 12),
-            const Align(
-              alignment: Alignment.center,
-              child: Text(
-                'convitnhodev',
-                style: TextStyle(
-                  color: AppColor.primaryText,
-                  fontSize: 24,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ),
-            //const SizedBox(height: 12),
-            TextButton(
-              onPressed: () {},
-              child: const Text('Edit Profile'),
-            ),
-            const SizedBox(height: 12),
-            const SettingCard(
+            SettingCard(
               icon: Icons.person_outline,
               title: 'Account',
             ),
-            const SizedBox(height: 12),
-            const SettingCard(
+            SizedBox(height: 20),
+            SettingCard(
               icon: Icons.language_outlined,
               title: 'Language',
             ),
-            const SizedBox(height: 12),
-            const SettingCard(
+            SizedBox(height: 20),
+            SettingCard(
               icon: Icons.notifications_active_outlined,
               title: 'Notification',
             ),
-            const SizedBox(height: 12),
-            const SettingCard(
+            SizedBox(height: 20),
+            SettingCard(
               icon: Icons.dark_mode_outlined,
               title: 'Dark Mode',
             ),
-            const SizedBox(height: 12),
-            const SettingCard(
+            SizedBox(height: 20),
+            SettingCard(
               icon: Icons.feedback_outlined,
               title: 'Give Feedback',
             ),
-            const SizedBox(height: 12),
-            const SettingCard(
+            SizedBox(height: 20),
+            SettingCard(
               icon: Icons.info_outline_rounded,
               title: 'About',
             ),

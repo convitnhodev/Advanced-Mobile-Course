@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/common/style/color.dart';
 import 'package:flutter_application_1/pages/frame/home/controller.dart';
+import 'package:flutter_application_1/pages/frame/profile/view.dart';
 import 'package:flutter_application_1/pages/frame/search/view.dart';
 import 'package:flutter_application_1/pages/frame/setting/view.dart';
 import 'package:flutter_application_1/pages/frame/sign_in/view.dart';
@@ -19,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   List<Widget> pages = [
     const TutorsListPage(),
     const SearchPage(),
-    const SettingPage(),
+    const ProfilePage(),
     // SignInPage(),
   ];
 
@@ -58,8 +59,8 @@ class _HomePageState extends State<HomePage> {
             label: 'Course',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings_outlined),
-            label: 'Setting',
+            icon: Icon(Icons.person_outline),
+            label: 'Profile',
           ),
         ],
       ),
