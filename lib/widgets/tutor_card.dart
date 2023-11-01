@@ -58,7 +58,7 @@ class _TutorCardState extends State<TutorCard> {
               ],
             ),
             const SizedBox(
-              height: 16,
+              height: 24,
             ),
             const Row(
               children: [
@@ -69,8 +69,8 @@ class _TutorCardState extends State<TutorCard> {
                   child: Text(
                     'convitnhodev',
                     style: TextStyle(
-                      color: AppColor.primaryText,
-                      fontSize: 20,
+                      color: AppColor.whiteText,
+                      fontSize: 24,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -96,11 +96,14 @@ class _TutorCardState extends State<TutorCard> {
             const SizedBox(
               height: 16,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: List<Widget>.generate(
-                5,
-                (index) => const Icon(Icons.star, color: Colors.amber),
+            Padding(
+              padding: const EdgeInsets.only(left: 16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: List<Widget>.generate(
+                  5,
+                  (index) => const Icon(Icons.star, color: Colors.amber),
+                ),
               ),
             ),
             const SizedBox(
