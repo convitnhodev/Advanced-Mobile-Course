@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/common/style/color.dart';
 import 'package:flutter_application_1/pages/frame/detail_tutor/index.dart';
 import 'package:flutter_application_1/pages/frame/tutor_search/index.dart';
+import 'package:flutter_application_1/pages/frame/video_call/video_call_page.dart';
+import 'package:flutter_application_1/widgets/upcoming_lesson_card.dart';
 
 import '../../../widgets/tutor_card.dart';
 
@@ -39,7 +41,53 @@ class _TutorsListPageState extends State<TutorsListPage> {
             ),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () async {
+              final result = await showDialog<bool>(
+                context: context,
+                builder: (context) => AlertDialog(
+                  backgroundColor: AppColor.primaryBackground,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16)
+                  ),
+                  content: const UpcomingLessonCard(),
+                  actions: [
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Expanded(
+                          child: TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop(false);
+                            },
+                            child: const Text(
+                              "I will join later",
+                              style: TextStyle(color: AppColor.primaryText),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                        Expanded(
+                          child: TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop(true);
+                            },
+                            child: const Text('Enter lesson room'),
+                          ),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              ).then((value) => value ?? false);
+
+              if (mounted && result) {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const VideoCallPage(),
+                  ),
+                );
+              }
+            },
             icon: const Icon(
               Icons.video_call_outlined,
               color: AppColor.primaryText,

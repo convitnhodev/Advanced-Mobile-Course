@@ -48,7 +48,17 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ),
                 ),
-                //const SizedBox(height: 12),
+                const SizedBox(height: 8),
+                const Text(
+                  'Total Lesson Time: 400 hours 30 minutes',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w300,
+                    color: AppColor.primaryText,
+                  ),
+                ),
+                const SizedBox(height: 12),
                 TextButton(
                   onPressed: () {},
                   child: const Text('Edit Profile'),
