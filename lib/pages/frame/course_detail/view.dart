@@ -1,44 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/common/style/color.dart';
 
-class TopicCards extends StatelessWidget {
-  const TopicCards({
-    super.key,
-    required this.icon,
-    required this.title,
-  });
-
-  final IconData icon;
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
-        color: AppColor.primarySecondaryBackground,
-      ),
-      child: Row(
-        children: [
-          Icon(
-            icon,
-            color: AppColor.primaryText,
-            size: 28,
-          ),
-          const SizedBox(width: 16),
-          Text(
-            title,
-            style: const TextStyle(
-              fontSize: 16,
-              color: AppColor.primaryText,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
+import '../../../widgets/course_topic_card.dart';
 
 class CourseDetailPage extends StatefulWidget {
   const CourseDetailPage({super.key});
@@ -303,10 +266,10 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                 color: AppColor.primarySecondaryBackground,
               ),
               clipBehavior: Clip.hardEdge,
-              child: const Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Text(
+                  const Text(
                     'List of Topics',
                     style: TextStyle(
                       color: AppColor.primaryText,
@@ -315,7 +278,7 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
                   Row(
@@ -323,22 +286,25 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          
-                          TopicCards(
+                          CourseTopicCard(
                             icon: Icons.list_outlined,
                             title: '1. Your favorite movie',
+                            onPressed: () {},
                           ),
-                          TopicCards(
+                          CourseTopicCard(
                             icon: Icons.list_outlined,
                             title: '2. Your favorite TV show',
+                            onPressed: () {},
                           ),
-                          TopicCards(
+                          CourseTopicCard(
                             icon: Icons.list_outlined,
                             title: '3. Film production',
+                            onPressed: () {},
                           ),
-                          TopicCards(
+                          CourseTopicCard(
                             icon: Icons.list_outlined,
                             title: '4. The world of streaming',
+                            onPressed: () {},
                           ),
                         ],
                       )

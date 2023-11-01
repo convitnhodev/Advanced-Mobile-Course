@@ -25,30 +25,16 @@ class _ProfilePageState extends State<ProfilePage> {
         elevation: 0,
       ),
       backgroundColor: AppColor.primaryBackground,
-      body: Container(
-        padding: const EdgeInsets.symmetric(
-          vertical: 8,
-          horizontal: 20,
-        ),
+      body: Padding(
+        padding: const EdgeInsets.all(24),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(
               children: [
-                Align(
-                  alignment: Alignment.center,
-                  child: Container(
-                    width: 120,
-                    height: 120,
-                    clipBehavior: Clip.hardEdge,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                    ),
-                    child: const CircleAvatar(
-                      backgroundImage: AssetImage('lib/images/avatar.jpeg'),
-                      radius: 44,
-                    ),
-                  ),
+                const CircleAvatar(
+                  backgroundImage: AssetImage('lib/images/avatar.jpeg'),
+                  radius: 60,
                 ),
                 const SizedBox(height: 12),
                 const Align(
@@ -67,19 +53,19 @@ class _ProfilePageState extends State<ProfilePage> {
                   onPressed: () {},
                   child: const Text('Edit Profile'),
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 16),
                 ProfileCard(
                   icon: Icons.calendar_month_outlined,
                   title: 'Schedule',
                   onPressed: () {},
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 16),
                 ProfileCard(
                   icon: Icons.history_outlined,
                   title: 'History',
                   onPressed: () {},
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 16),
                 ProfileCard(
                   icon: Icons.settings_outlined,
                   title: 'Settings',
@@ -94,14 +80,15 @@ class _ProfilePageState extends State<ProfilePage> {
               ],
             ),
             Align(
-              alignment: FractionalOffset.bottomCenter,
+              alignment: Alignment.bottomCenter,
               child: TextButton(
                 style: TextButton.styleFrom(
+                  foregroundColor: Colors.red,
                   minimumSize: const Size.fromHeight(48),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                     side: const BorderSide(
-                      color: Colors.blue,
+                      color: Colors.red,
                     ),
                   ),
                 ),
@@ -109,9 +96,15 @@ class _ProfilePageState extends State<ProfilePage> {
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.logout_outlined),
+                    Icon(
+                      Icons.logout_outlined,
+                      color: Colors.red,
+                    ),
                     SizedBox(width: 12),
-                    Text('Logout'),
+                    Text(
+                      'Logout',
+                      style: TextStyle(fontSize: 16, color: Colors.red),
+                    ),
                   ],
                 ),
               ),
