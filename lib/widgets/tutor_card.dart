@@ -39,18 +39,21 @@ class _TutorCardState extends State<TutorCard> {
                     fit: BoxFit.cover,
                   ),
                 ),
-                Align(
-                  alignment: Alignment.topRight,
-                  child: TextButton(
+                Positioned(
+                  right: 10,
+                  child: IconButton(
+                    style: IconButton.styleFrom(
+                      foregroundColor: Colors.red,
+                    ),
                     onPressed: () {
                       setState(() {
                         is_favorite = !is_favorite;
                       });
                     },
-                    child: Icon(
+                    icon: Icon(
                       is_favorite ? Icons.favorite : Icons.favorite_border_outlined,
                       color: is_favorite ? Colors.red : AppColor.primaryBackground,
-                      size: 48,
+                      size: 40,
                     ),
                   ),
                 ),
@@ -99,7 +102,7 @@ class _TutorCardState extends State<TutorCard> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: List<Widget>.generate(
                 5,
-                    (index) => const Icon(Icons.star, color: Colors.amber),
+                (index) => const Icon(Icons.star, color: Colors.amber),
               ),
             ),
             const SizedBox(
@@ -110,7 +113,7 @@ class _TutorCardState extends State<TutorCard> {
               runSpacing: -3,
               children: List<Widget>.generate(
                 3,
-                    (index) => const Chip(
+                (index) => const Chip(
                   backgroundColor: AppColor.primaryBackground,
                   label: Text(
                     'back-end',

@@ -11,6 +11,7 @@ import 'package:get/get.dart';
 Future<void> main() async {
   runApp(
     const MaterialApp(
+      title: 'LetTutor',
       debugShowCheckedModeBanner: false,
       home: HomePage(),
     ),

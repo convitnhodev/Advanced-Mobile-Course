@@ -63,7 +63,7 @@ class _CourseListPageState extends State<CourseListPage> {
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.refresh_outlined),
+                  Icon(Icons.next_plan_outlined),
                   SizedBox(width: 12),
                   Text('English For Traveling'),
                 ],

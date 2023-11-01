@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/common/style/color.dart';
 import 'package:flutter_application_1/pages/frame/course_list/index.dart';
-import 'package:flutter_application_1/pages/frame/home/controller.dart';
 import 'package:flutter_application_1/pages/frame/profile/view.dart';
-import 'package:flutter_application_1/pages/frame/search/view.dart';
-import 'package:flutter_application_1/pages/frame/setting/view.dart';
-import 'package:flutter_application_1/pages/frame/sign_in/view.dart';
-import 'package:flutter_application_1/pages/frame/tutors_list/controller.dart';
 import 'package:flutter_application_1/pages/frame/tutors_list/view.dart';
 import 'package:get/get.dart';
 

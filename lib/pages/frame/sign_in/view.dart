@@ -41,36 +41,58 @@ class SignInPage extends GetView<SignInController> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   const TextField(
+                    style: TextStyle(
+                      color: AppColor.primaryText,
+                    ),
                     decoration: InputDecoration(
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: AppColor.primaryText, width: 1),
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10),
-                          ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: AppColor.primaryText,
+                          width: 1,
                         ),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: AppColor.primaryText, width: 1),
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10),
-                          ),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
                         ),
-                        hintText: 'Email',
-                        hintStyle: TextStyle(fontWeight: FontWeight.w200, color: AppColor.primaryText)),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: AppColor.primaryText,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
+                      hintText: 'Email',
+                      hintStyle: TextStyle(
+                        fontWeight: FontWeight.w200,
+                        color: AppColor.primaryText,
+                      ),
+                    ),
                   ),
                   const SizedBox(
                     height: 24,
                   ),
                   const TextField(
                     obscureText: true,
+                    style: TextStyle(
+                      color: AppColor.primaryText,
+                    ),
                     decoration: InputDecoration(
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppColor.primaryText, width: 1),
+                        borderSide: BorderSide(
+                          color: AppColor.primaryText,
+                          width: 1,
+                        ),
                         borderRadius: BorderRadius.all(
                           Radius.circular(12),
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppColor.primaryText, width: 1),
+                        borderSide: BorderSide(
+                          color: AppColor.primaryText,
+                          width: 1,
+                        ),
                         borderRadius: BorderRadius.all(
                           Radius.circular(12),
                         ),
@@ -128,14 +150,13 @@ class SignInPage extends GetView<SignInController> {
                     onPressed: () {},
                     icon: Image.asset('lib/images/facebook.png'),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 30,
-                  ), 
+                  ),
                   IconButton(
                     onPressed: () {},
                     icon: Image.asset('lib/images/google.png'),
                   ),
-                 
                 ],
               ),
               Padding(
@@ -143,8 +164,11 @@ class SignInPage extends GetView<SignInController> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text('Not a member yet?', 
-                    style: TextStyle(color: AppColor.primaryText),
+                    const Text(
+                      'Not a member yet?',
+                      style: TextStyle(
+                        color: AppColor.primaryText,
+                      ),
                     ),
                     TextButton(
                       onPressed: () {},

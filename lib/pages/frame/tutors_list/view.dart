@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/common/style/color.dart';
 import 'package:flutter_application_1/pages/frame/detail_tutor/index.dart';
+import 'package:flutter_application_1/pages/frame/tutor_search/index.dart';
 
 import '../../../widgets/tutor_card.dart';
 
@@ -25,7 +26,13 @@ class _TutorsListPageState extends State<TutorsListPage> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const TutorSearchPage(),
+                ),
+              );
+            },
             icon: const Icon(
               Icons.search_outlined,
               color: AppColor.primaryText,
