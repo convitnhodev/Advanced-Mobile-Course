@@ -128,7 +128,7 @@ class RegisterPage extends GetView<SignInController> {
                     onPressed: () {},
                     icon: Image.asset('lib/images/facebook.png'),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 30,
                   ), 
                   IconButton(

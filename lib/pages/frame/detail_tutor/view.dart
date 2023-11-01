@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/common/style/color.dart';
-import 'package:flutter_application_1/pages/frame/tutors_list/controller.dart';
-import 'package:get/get.dart';
-import 'package:flutter_application_1/common/const/size.dart';
 
 class DetailTutorPage extends StatefulWidget {
   const DetailTutorPage({super.key});

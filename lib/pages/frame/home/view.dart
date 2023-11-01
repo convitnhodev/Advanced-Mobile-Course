@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/common/style/color.dart';
 import 'package:flutter_application_1/pages/frame/course_list/index.dart';
 import 'package:flutter_application_1/pages/frame/profile/view.dart';
-import 'package:flutter_application_1/pages/frame/tutors_list/view.dart';
-import 'package:get/get.dart';
+
+import '../tutor_list/view.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/common/style/color.dart';
+import 'package:flutter_application_1/pages/frame/tutor_search_result/tutor_search_result_page.dart';
 
 class TutorSearchPage extends StatefulWidget {
   const TutorSearchPage({super.key});
@@ -52,7 +53,13 @@ class _TutorSearchPageState extends State<TutorSearchPage> {
         backgroundColor: AppColor.primaryBackground,
         actions: [
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const TutorSearchResultPage(),
+                ),
+              );
+            },
             child: const Text('SEARCH'),
           ),
         ],
@@ -88,11 +95,14 @@ class _TutorSearchPageState extends State<TutorSearchPage> {
               ),
             ),
             const SizedBox(height: 24),
-            const Text('Nationality', style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w700,
-              color: AppColor.primaryText,
-            ),),
+            const Text(
+              'Nationality',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w700,
+                color: AppColor.primaryText,
+              ),
+            ),
             const SizedBox(height: 4),
             Wrap(
               spacing: 8,
@@ -118,18 +128,21 @@ class _TutorSearchPageState extends State<TutorSearchPage> {
               ),
             ),
             const SizedBox(height: 24),
-            const Text('Specialty', style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w700,
-              color: AppColor.primaryText,
-            ),),
+            const Text(
+              'Specialty',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w700,
+                color: AppColor.primaryText,
+              ),
+            ),
             const SizedBox(height: 4),
             Wrap(
               spacing: 8,
               runSpacing: -4,
               children: List<Widget>.generate(
                 _specialties.length,
-                    (index) => ChoiceChip(
+                (index) => ChoiceChip(
                   backgroundColor: AppColor.primarySecondaryBackground,
                   selectedColor: Colors.lightBlue[100],
                   selected: _chosenSpecialties == index,

@@ -42,9 +42,7 @@ class _TutorCardState extends State<TutorCard> {
                 Positioned(
                   right: 10,
                   child: IconButton(
-                    style: IconButton.styleFrom(
-                      foregroundColor: Colors.red,
-                    ),
+                    splashColor: Colors.transparent,
                     onPressed: () {
                       setState(() {
                         is_favorite = !is_favorite;

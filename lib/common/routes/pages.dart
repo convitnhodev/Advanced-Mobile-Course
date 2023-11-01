@@ -4,9 +4,10 @@ import 'package:flutter_application_1/pages/frame/home/bindings.dart';
 import 'package:flutter_application_1/pages/frame/home/view.dart';
 import 'package:flutter_application_1/pages/frame/sign_in/bindings.dart';
 import 'package:flutter_application_1/pages/frame/sign_in/view.dart';
-import 'package:flutter_application_1/pages/frame/tutors_list/bindings.dart';
-import 'package:flutter_application_1/pages/frame/tutors_list/view.dart';
 import 'package:get/route_manager.dart';
+
+import '../../pages/frame/tutor_list/bindings.dart';
+import '../../pages/frame/tutor_list/view.dart';
 
 class AppPages {
   static const INITIAL = AppRoutes.INITIAL; 
@@ -30,7 +31,7 @@ class AppPages {
 
     GetPage(
       name: AppRoutes.TUTORS_LIST, 
-      page: () => const TutorsListPage(), 
+      page: () => const TutorsListPage(),
       binding: TutorsListBinding()
     ),
 

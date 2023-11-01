@@ -1,61 +1,48 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/common/style/color.dart';
-import 'package:flutter_application_1/pages/frame/detail_tutor/index.dart';
-import 'package:flutter_application_1/pages/frame/tutor_search/index.dart';
 
+import '../../../common/style/color.dart';
 import '../../../widgets/tutor_card.dart';
+import '../detail_tutor/view.dart';
 
-class TutorsListPage extends StatefulWidget {
-  const TutorsListPage({super.key});
+class TutorSearchResultPage extends StatefulWidget {
+  const TutorSearchResultPage({super.key});
 
   @override
-  State<TutorsListPage> createState() => _TutorsListPageState();
+  State<TutorSearchResultPage> createState() => _TutorSearchResultPageState();
 }
 
-class _TutorsListPageState extends State<TutorsListPage> {
+class _TutorSearchResultPageState extends State<TutorSearchResultPage> {
+  int _currentPage = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Tutors',
-          style: TextStyle(color: AppColor.primaryText),
+        title: Text(
+          'Result ${_currentPage + 1} of 6',
+          style: const TextStyle(
+            color: AppColor.primaryText,
+          ),
         ),
         backgroundColor: AppColor.primaryBackground,
         elevation: 0,
         centerTitle: true,
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => const TutorSearchPage(),
-                ),
-              );
-            },
-            icon: const Icon(
-              Icons.search_outlined,
-              color: AppColor.primaryText,
-            ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.video_call_outlined,
-              color: AppColor.primaryText,
-            ),
-          ),
-        ],
       ),
       backgroundColor: AppColor.primaryBackground,
       body: Column(
         children: [
-          const SizedBox(
-            height: 8,
-          ),
+          const SizedBox(height: 24),
           Expanded(
             child: PageView(
+              onPageChanged: (index) {
+                setState(() {
+                  _currentPage = index;
+                });
+              },
               children: const [
+                TutorCard(),
+                TutorCard(),
+                TutorCard(),
                 TutorCard(),
                 TutorCard(),
                 TutorCard(),
@@ -86,11 +73,12 @@ class _TutorsListPageState extends State<TutorsListPage> {
                 children: [
                   Icon(Icons.info_outline_rounded),
                   SizedBox(width: 12),
-                  Text('See more detail'),
+                  Text('View Detail'),
                 ],
               ),
             ),
           ),
+          const SizedBox(height: 24),
         ],
       ),
     );

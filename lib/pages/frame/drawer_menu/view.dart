@@ -7,7 +7,7 @@ class DrawerMenuPage extends GetView<DrawerMenuController> {
   
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return  const Scaffold(
       body:  SingleChildScrollView(
        
          
