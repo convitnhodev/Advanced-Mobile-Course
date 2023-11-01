@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
     // SignInPage(),
   ];
 
-  int current_index = 0;
+  int _currentIndex = 0;
 
   List<String> pagesTitles = ['Tutors', 'Search', 'Settings'];
 
@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
       //   )
 
       // ),
-      body: pages[current_index],
+      body: pages[_currentIndex],
 
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: AppColor.primaryBackground,
@@ -41,21 +41,21 @@ class _HomePageState extends State<HomePage> {
         unselectedItemColor: AppColor.primaryText,
         onTap: (value) => {
           setState(() {
-            current_index = value;
+            _currentIndex = value;
           }),
         },
-        currentIndex: current_index,
-        items: const [
+        currentIndex: _currentIndex,
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.school_outlined),
+            icon: Icon(_currentIndex == 0 ? Icons.school : Icons.school_outlined),
             label: 'Tutor',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.text_snippet_outlined),
+            icon: Icon(_currentIndex == 1 ? Icons.text_snippet : Icons.text_snippet_outlined),
             label: 'Course',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
+            icon: Icon(_currentIndex == 2 ? Icons.person : Icons.person_outline),
             label: 'Profile',
           ),
         ],
