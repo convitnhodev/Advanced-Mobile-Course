@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/common/style/color.dart';
+import 'package:flutter_application_1/pages/frame/schedule/view.dart';
 import 'package:flutter_application_1/pages/frame/setting/index.dart';
 import 'package:flutter_application_1/widgets/Profile_card.dart';
 
@@ -67,7 +68,13 @@ class _ProfilePageState extends State<ProfilePage> {
                 ProfileCard(
                   icon: Icons.calendar_month_outlined,
                   title: 'Schedule',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const SchedulePage(),
+                      ),
+                    );
+                  },
                 ),
                 const SizedBox(height: 16),
                 ProfileCard(

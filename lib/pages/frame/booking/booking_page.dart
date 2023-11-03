@@ -82,31 +82,30 @@ class BookingPage extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 9),
-                        SizedBox(
-                          width: MediaQuery.of(context).size.width,
-                          child: TextField(
-                            minLines: 3,
-                            maxLines: 4,
-                            style: const TextStyle(
-                              color: AppColor.primaryText,
+                        TextField(
+                          minLines: 3,
+                          maxLines: 4,
+                          style: const TextStyle(
+                            color: AppColor.primaryText,
+                          ),
+                          decoration: InputDecoration(
+                            hintText: 'Your requests for the tutor',
+                            hintStyle: const TextStyle(
+                              fontWeight: FontWeight.w300,
+                              color: Colors.grey,
                             ),
-                            decoration: InputDecoration(
-                              hintText: 'Your requests for the tutor',
-                              hintStyle: const TextStyle(
-                                fontWeight: FontWeight.w300,
-                                color: Colors.grey,
+                            contentPadding: const EdgeInsets.all(12),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                color: AppColor.primaryText,
                               ),
-                              contentPadding: const EdgeInsets.all(12),
-                              focusedBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
-                                    color: AppColor.primaryText,
-                                  ),
-                                  borderRadius: BorderRadius.circular(16)),
-                              enabledBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
-                                    color: AppColor.primaryText,
-                                  ),
-                                  borderRadius: BorderRadius.circular(16)),
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                color: AppColor.primaryText,
+                              ),
+                              borderRadius: BorderRadius.circular(16),
                             ),
                           ),
                         ),
