@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../common/style/color.dart';
-import '../../../widgets/tutor_card.dart';
+import '../../../widgets/tutor_card_horizontal.dart';
 import '../detail_tutor/view.dart';
 
 class TutorSearchResultPage extends StatefulWidget {
@@ -40,12 +40,12 @@ class _TutorSearchResultPageState extends State<TutorSearchResultPage> {
                 });
               },
               children: const [
-                TutorCard(),
-                TutorCard(),
-                TutorCard(),
-                TutorCard(),
-                TutorCard(),
-                TutorCard(),
+                TutorCardHorizontal(),
+                TutorCardHorizontal(),
+                TutorCardHorizontal(),
+                TutorCardHorizontal(),
+                TutorCardHorizontal(),
+                TutorCardHorizontal(),
               ],
             ),
           ),

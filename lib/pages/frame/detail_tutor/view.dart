@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/common/style/color.dart';
+import 'package:flutter_application_1/widgets/booking_sheet.dart';
 
 class DetailTutorPage extends StatefulWidget {
   const DetailTutorPage({super.key});
@@ -346,7 +347,21 @@ class _DetailTutorPageState extends State<DetailTutorPage> {
                     ),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () async {
+                  await showModalBottomSheet(
+                    context: context,
+                    isScrollControlled: true,
+                    elevation: 5,
+                    clipBehavior: Clip.hardEdge,
+                    backgroundColor: AppColor.primaryBackground,
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.vertical(
+                        top: Radius.circular(16),
+                      ),
+                    ),
+                    builder: (context) => const BookingSheet(),
+                  );
+                },
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

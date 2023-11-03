@@ -5,7 +5,7 @@ import 'package:flutter_application_1/pages/frame/tutor_search/index.dart';
 import 'package:flutter_application_1/pages/frame/video_call/video_call_page.dart';
 import 'package:flutter_application_1/widgets/upcoming_lesson_card.dart';
 
-import '../../../widgets/tutor_card.dart';
+import '../../../widgets/tutor_card_horizontal.dart';
 
 class TutorsListPage extends StatefulWidget {
   const TutorsListPage({super.key});
@@ -104,9 +104,9 @@ class _TutorsListPageState extends State<TutorsListPage> {
           Expanded(
             child: PageView(
               children: const [
-                TutorCard(),
-                TutorCard(),
-                TutorCard(),
+                TutorCardHorizontal(),
+                TutorCardHorizontal(),
+                TutorCardHorizontal(),
               ],
             ),
           ),

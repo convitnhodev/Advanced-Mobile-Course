@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 
 import '../common/style/color.dart';
 
-class TutorCard extends StatefulWidget {
-  const TutorCard({super.key});
+class TutorCardHorizontal extends StatefulWidget {
+  const TutorCardHorizontal({super.key});
 
   @override
-  State<TutorCard> createState() => _TutorCardState();
+  State<TutorCardHorizontal> createState() => _TutorCardHorizontalState();
 }
 
-class _TutorCardState extends State<TutorCard> {
-  bool is_favorite = false;
+class _TutorCardHorizontalState extends State<TutorCardHorizontal> {
+  bool _isFavorite = false;
 
   @override
   Widget build(BuildContext context) {
@@ -45,12 +45,12 @@ class _TutorCardState extends State<TutorCard> {
                     splashColor: Colors.transparent,
                     onPressed: () {
                       setState(() {
-                        is_favorite = !is_favorite;
+                        _isFavorite = !_isFavorite;
                       });
                     },
                     icon: Icon(
-                      is_favorite ? Icons.favorite : Icons.favorite_border_outlined,
-                      color: is_favorite ? Colors.red : AppColor.primaryBackground,
+                      _isFavorite ? Icons.favorite : Icons.favorite_border_outlined,
+                      color: _isFavorite ? Colors.red : AppColor.primaryBackground,
                       size: 40,
                     ),
                   ),
