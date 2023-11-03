@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/common/style/color.dart';
-import 'package:flutter_application_1/widgets/schedule_card.dart';
+import 'package:flutter_application_1/widgets/history_card.dart';
 
-class SchedulePage extends StatefulWidget {
-  const SchedulePage({super.key});
+import '../../../common/style/color.dart';
+
+class HistoryPage extends StatefulWidget {
+  const HistoryPage({super.key});
 
   @override
-  State<SchedulePage> createState() => _SchedulePageState();
+  State<HistoryPage> createState() => _HistoryPageState();
 }
 
-class _SchedulePageState extends State<SchedulePage> {
+class _HistoryPageState extends State<HistoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +19,7 @@ class _SchedulePageState extends State<SchedulePage> {
         backgroundColor: AppColor.primaryBackground,
         elevation: 0,
         title: const Text(
-          'Scheduled Lesson',
+          'History',
           style: TextStyle(color: AppColor.primaryText),
         ),
       ),
@@ -27,7 +28,7 @@ class _SchedulePageState extends State<SchedulePage> {
         child: Column(
           children: [
             const Text(
-              'You have 9 scheduled lessons',
+              'You have finished 12 lessons',
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w300,
@@ -37,8 +38,8 @@ class _SchedulePageState extends State<SchedulePage> {
             const SizedBox(height: 16),
             const SizedBox(height: 8),
             ...List<Widget>.generate(
-              9,
-              (index) => const ScheduleCard(),
+              12,
+              (index) => const HistoryCard(),
             ),
           ],
         ),

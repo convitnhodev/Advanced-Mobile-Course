@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/common/style/color.dart';
+import 'package:flutter_application_1/pages/frame/history/view.dart';
 import 'package:flutter_application_1/pages/frame/schedule/view.dart';
 import 'package:flutter_application_1/pages/frame/setting/index.dart';
 import 'package:flutter_application_1/widgets/Profile_card.dart';
@@ -80,7 +81,13 @@ class _ProfilePageState extends State<ProfilePage> {
                 ProfileCard(
                   icon: Icons.history_outlined,
                   title: 'History',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const HistoryPage(),
+                      ),
+                    );
+                  },
                 ),
                 const SizedBox(height: 16),
                 ProfileCard(
