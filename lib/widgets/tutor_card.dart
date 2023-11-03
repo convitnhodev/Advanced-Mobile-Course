@@ -58,7 +58,7 @@ class _TutorCardState extends State<TutorCard> {
               ],
             ),
             const SizedBox(
-              height: 24,
+              height: 16,
             ),
             const Row(
               children: [
@@ -70,8 +70,9 @@ class _TutorCardState extends State<TutorCard> {
                     'convitnhodev',
                     style: TextStyle(
                       color: AppColor.whiteText,
-                      fontSize: 24,
-                      fontWeight: FontWeight.w600,
+                      fontSize: 20,
+                      letterSpacing: 0.25,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
@@ -113,7 +114,7 @@ class _TutorCardState extends State<TutorCard> {
               spacing: 12,
               runSpacing: -3,
               children: List<Widget>.generate(
-                3,
+                4,
                 (index) => const Chip(
                   backgroundColor: AppColor.primaryBackground,
                   label: Text(
