@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/common/style/color.dart';
+import 'package:flutter_application_1/pages/frame/course_topic/view.dart';
+import 'package:get/get.dart';
 
 import '../../../widgets/course_topic_card.dart';
 
@@ -289,22 +291,54 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                           CourseTopicCard(
                             icon: Icons.list_outlined,
                             title: '1. Your favorite movie',
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => const CourseTopicPage(
+                                    index: 0,
+                                  ),
+                                ),
+                              );
+                            },
                           ),
                           CourseTopicCard(
                             icon: Icons.list_outlined,
                             title: '2. Your favorite TV show',
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => const CourseTopicPage(
+                                    index: 1,
+                                  ),
+                                ),
+                              );
+                            },
                           ),
                           CourseTopicCard(
                             icon: Icons.list_outlined,
                             title: '3. Film production',
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => const CourseTopicPage(
+                                    index: 2,
+                                  ),
+                                ),
+                              );
+                            },
                           ),
                           CourseTopicCard(
                             icon: Icons.list_outlined,
                             title: '4. The world of streaming',
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => const CourseTopicPage(
+                                    index: 3,
+                                  ),
+                                ),
+                              );
+                            },
                           ),
                         ],
                       )
