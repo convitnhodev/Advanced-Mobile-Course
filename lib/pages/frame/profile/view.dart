@@ -3,6 +3,7 @@ import 'package:flutter_application_1/common/style/color.dart';
 import 'package:flutter_application_1/pages/frame/history/view.dart';
 import 'package:flutter_application_1/pages/frame/schedule/view.dart';
 import 'package:flutter_application_1/pages/frame/setting/index.dart';
+import 'package:flutter_application_1/pages/frame/sign_in/index.dart';
 import 'package:flutter_application_1/widgets/Profile_card.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -116,7 +117,13 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (context) => const SignInPage(),
+                    ),
+                  );
+                },
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -127,7 +134,10 @@ class _ProfilePageState extends State<ProfilePage> {
                     SizedBox(width: 12),
                     Text(
                       'Logout',
-                      style: TextStyle(fontSize: 16, color: Colors.red),
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.red,
+                      ),
                     ),
                   ],
                 ),

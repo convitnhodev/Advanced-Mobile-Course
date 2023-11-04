@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/common/style/color.dart';
+import 'package:flutter_application_1/pages/frame/home/index.dart';
 import 'package:flutter_application_1/pages/frame/sign_in/controller.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 
@@ -25,13 +26,13 @@ class SignInPage extends GetView<SignInController> {
                   letterSpacing: 0.5,
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 8),
               const Text(
                 'Welcome to LetTutor',
                 textAlign: TextAlign.right,
                 style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w200,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w300,
                   color: AppColor.primaryText,
                   letterSpacing: 0.5,
                 ),
@@ -129,9 +130,15 @@ class SignInPage extends GetView<SignInController> {
                             ),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (context) => const HomePage(),
+                            ),
+                          );
+                        },
                         child: const Text(
-                          'Login',
+                          'Sign In',
                           style: TextStyle(fontSize: 18),
                         )),
                   )
