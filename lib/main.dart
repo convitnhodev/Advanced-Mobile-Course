@@ -4,6 +4,8 @@ import 'package:flutter_application_1/pages/frame/sign_in/index.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
+// init milestone-2
+
 Future<void> main() async {
   runApp(
     const MaterialApp(
